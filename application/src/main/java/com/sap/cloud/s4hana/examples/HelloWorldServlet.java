@@ -25,20 +25,7 @@ public class HelloWorldServlet extends HttpServlet
     protected void doGet( final HttpServletRequest request, final HttpServletResponse response )
         throws IOException
     {
-        try {
-            final List<BusinessPartner> businessPartner =
-                    new DefaultBusinessPartnerService()
-                    .getAllBusinessPartner()
-                    .select(BusinessPartner.BUSINESS_PARTNER,
-                            BusinessPartner.FIRST_NAME,
-                            BusinessPartner.LAST_NAME)
-                    .execute();
-            response.setContentType("application/json");
-            response.getWriter().write(new Gson().toJson(businessPartner));
-        } catch (ODataException e) {
-            e.printStackTrace();
-        }
-//        logger.info("I am running!");
-//        response.getWriter().write("Hello World!");
+        logger.info("I am running!");
+        response.getWriter().write("Hello World!");
     }
 }
