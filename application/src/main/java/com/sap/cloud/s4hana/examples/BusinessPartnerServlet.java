@@ -31,7 +31,7 @@ public class BusinessPartnerServlet extends HttpServlet {
                             .select(BusinessPartner.BUSINESS_PARTNER,
                                     BusinessPartner.FIRST_NAME,
                                     BusinessPartner.LAST_NAME)
-                            .execute(new ErpConfigContext("HSS"));
+                            .execute();
             response.setContentType("application/json");
             response.getWriter().write(new Gson().toJson(businessPartner));
         } catch (ODataException e) {
