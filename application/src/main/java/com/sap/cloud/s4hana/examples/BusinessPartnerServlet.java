@@ -1,5 +1,6 @@
 package com.sap.cloud.s4hana.examples;
 
+import com.sap.cloud.sdk.s4hana.connectivity.ErpConfigContext;
 import org.slf4j.Logger;
 
 import com.google.gson.Gson;
@@ -30,7 +31,7 @@ public class BusinessPartnerServlet extends HttpServlet {
                             .select(BusinessPartner.BUSINESS_PARTNER,
                                     BusinessPartner.FIRST_NAME,
                                     BusinessPartner.LAST_NAME)
-                            .execute();
+                            .execute(new ErpConfigContext("HSS"));
             response.setContentType("application/json");
             response.getWriter().write(new Gson().toJson(businessPartner));
         } catch (ODataException e) {
