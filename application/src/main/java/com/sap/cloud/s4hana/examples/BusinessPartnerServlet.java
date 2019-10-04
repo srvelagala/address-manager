@@ -1,6 +1,5 @@
 package com.sap.cloud.s4hana.examples;
 
-import com.sap.cloud.sdk.s4hana.connectivity.ErpConfigContext;
 import org.slf4j.Logger;
 
 import com.google.gson.Gson;
@@ -9,7 +8,7 @@ import com.sap.cloud.sdk.odatav2.connectivity.ODataException;
 import com.sap.cloud.sdk.s4hana.datamodel.odata.namespaces.businesspartner.BusinessPartner;
 import com.sap.cloud.sdk.s4hana.datamodel.odata.services.DefaultBusinessPartnerService;
 
-import javax.jws.WebService;
+
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -35,7 +34,7 @@ public class BusinessPartnerServlet extends HttpServlet {
             response.setContentType("application/json");
             response.getWriter().write(new Gson().toJson(businessPartner));
         } catch (ODataException e) {
-            e.printStackTrace();
+            logger.error("method has failed", e);
         }
     }
 }
