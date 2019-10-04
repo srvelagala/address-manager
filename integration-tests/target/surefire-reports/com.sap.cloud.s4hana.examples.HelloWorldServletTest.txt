@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.sap.cloud.s4hana.examples.HelloWorldServletTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.546 s - in com.sap.cloud.s4hana.examples.HelloWorldServletTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.004 s - in com.sap.cloud.s4hana.examples.HelloWorldServletTest
